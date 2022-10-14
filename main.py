@@ -51,7 +51,7 @@ if __name__ == '__main__':
 
     args = parser.parse_args()
     torch.manual_seed(args.seed)
-    if args.gpu_ids == -1:
+    if args.gpu_ids == -1:  # choose device
         args.gpu_ids = [-1]
         device = torch.device('cpu')
     else:
